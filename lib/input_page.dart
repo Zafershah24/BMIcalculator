@@ -4,6 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
 import 'Icon_pack.dart';
 import 'constants.dart';
+import 'Result_page.dart';
+import 'Bottom_button.dart';
+import 'Calculator_brain.dart';
 
 enum Gender{Male,Female}
 int height = 180;
@@ -184,23 +187,23 @@ mainAxisAlignment: MainAxisAlignment.center,
               ],
             ),
     ),
-          Container(
-            height: 60,
-            width: double.infinity,
+          BottomButton(text: 'CALCULATE',
 
-            margin: EdgeInsets.only(top: 10,left: 70,right: 5,bottom: 15),
-             decoration: new BoxDecoration(
-               color: Color.fromRGBO(62, 216, 208,1),
-            borderRadius: BorderRadius.circular(15),
-          )
-
-          ),],
+            onTap: (){
+              CalculatorBrain calc =
+               CalculatorBrain(height: height, weight: weight);
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Result_page( bmiResult: calc.calculateBMI(),
+              resultText: calc.getResult(),
+              interpretation: calc.getInterpretation(),
+            ),),);
+          },),],
       )
 
 
     );
   }
 }
+
 
 class Roundfloatingbutton extends StatelessWidget {
   Roundfloatingbutton({this.icon,this.onPressed});
