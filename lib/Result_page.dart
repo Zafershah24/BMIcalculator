@@ -55,9 +55,12 @@ class Result_page extends StatelessWidget {
            ], ),),
 
           ),
-          BottomButton(text: 'RE-CALCULATE',onTap: (){
-            Navigator.pop(context);
-          },)
+          Hero(
+            tag: '',
+            child: BottomButton(text: 'RE-CALCULATE',height: 90,onTap: (){
+              Navigator.pop(context);
+            },),
+          )
         ],
       )
       ,
