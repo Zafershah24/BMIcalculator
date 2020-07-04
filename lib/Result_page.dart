@@ -5,8 +5,11 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'Bottom_button.dart';
 import 'Calculator_brain.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class Result_page extends StatelessWidget {
+
+
 
   Result_page({ @required this.bmiResult, @required this.resultText,@required this.interpretation});
 
@@ -50,8 +53,8 @@ class Result_page extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(15),
               alignment: Alignment.bottomLeft,
-              child:Text('YOUR RESULT',
-              style:kTitleTxtsize)
+              child:TypewriterAnimatedTextKit(text:['YOUR RESULT'],
+              textStyle:kTitleTxtsize,textAlign: TextAlign.start,alignment: AlignmentDirectional.topStart,)
             ),
           ),
           Expanded(
