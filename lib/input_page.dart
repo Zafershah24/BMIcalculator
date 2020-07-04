@@ -14,17 +14,20 @@ int weight =60;
 int age=20;
 
 class InputPage extends StatefulWidget {
+
+
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(11, 47, 77,1),
+        backgroundColor: Colors.teal,
         title: Text('BMI CALCULATOR',
         style: TextStyle(
             color: Colors.white,
@@ -134,6 +137,7 @@ mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Roundfloatingbutton(icon:FontAwesomeIcons.minus,
+
                           onPressed: (){
                             setState(() {
                               weight--;
@@ -188,6 +192,7 @@ mainAxisAlignment: MainAxisAlignment.center,
             ),
     ),
           BottomButton(text: 'CALCULATE',
+            height: 65,
 
             onTap: (){
               CalculatorBrain calc =
@@ -221,7 +226,7 @@ class Roundfloatingbutton extends StatelessWidget {
 
       ),
       shape: CircleBorder(),
-      fillColor: Colors.white,
+      fillColor: Colors.teal,
     );
   }
 }
