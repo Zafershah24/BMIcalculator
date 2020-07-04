@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const kLabeltextstyle=TextStyle(
   fontSize: 20,
-  color:Colors.white,
+  color:Color.fromRGBO(118, 222, 173,1),
 );
 
 const  kInactivecardcolor=Color.fromRGBO(11, 47, 77,1);
@@ -21,25 +21,25 @@ const kLargeTxtsize = TextStyle(
 
 
 const kTitleTxtsize = TextStyle(
-  fontSize: 50,
+  fontSize: 40,
   fontWeight: FontWeight.bold,
 );
 
 
 const kRESULTTxtsize = TextStyle(
-  fontSize: 25,
+  fontSize: 30,
   fontWeight: FontWeight.bold,
   color: Colors.limeAccent,
 );
 
 const kRESULTsize = TextStyle(
-  fontSize: 75,
+  fontSize: 55,
   fontWeight: FontWeight.bold,
   color: Colors.white,
 );
 
 const kRESULTINFosize = TextStyle(
-  fontSize: 21,
+  fontSize: 18,
   fontWeight: FontWeight.bold,
   color: Colors.lightGreenAccent,
 );
