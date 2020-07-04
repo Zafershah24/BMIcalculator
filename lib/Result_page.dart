@@ -7,12 +7,28 @@ import 'Bottom_button.dart';
 import 'Calculator_brain.dart';
 
 class Result_page extends StatelessWidget {
+
   Result_page({ @required this.bmiResult, @required this.resultText,@required this.interpretation});
 
   final String bmiResult;
   final String resultText;
   final String interpretation;
-  @override
+
+//  AnimationController controller;
+//
+//  @override
+//  void initState(){
+//    super.initState();
+//    controller=AnimationController(
+//      duration: Duration(seconds: 1),
+//      vsync:
+//    )
+//  }
+
+
+
+
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -55,12 +71,24 @@ class Result_page extends StatelessWidget {
            ], ),),
 
           ),
-          Hero(
-            tag: '',
-            child: BottomButton(text: 'RE-CALCULATE',height: 90,onTap: (){
-              Navigator.pop(context);
-            },),
-          )
+         GestureDetector   ( onTap: (){
+           Navigator.pop(context);  },
+         child: Container(
+         child: Center(
+    child: Text('RE-CALCULATE',
+    style: kLargeTxtsize,),
+    ),
+    height: 70,
+    width: double.infinity,
+    padding: EdgeInsets.only(bottom: 5),
+    margin: EdgeInsets.only(top:15),
+    decoration: new BoxDecoration(
+    color: Color.fromRGBO(118, 222, 173,1),
+    borderRadius: BorderRadius.circular(15),
+    )
+
+    ),
+        ),
         ],
       )
       ,
